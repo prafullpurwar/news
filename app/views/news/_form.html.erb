@@ -1,0 +1,50 @@
+<%= form_for(@news) do |f| %>
+  <% if @news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+      <ul>
+      <% @news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :headline %><br>
+    <%= f.text_field :headline %>
+    </div>
+  
+    
+
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :newspaper %><br>
+    <%= f.text_field :newspaper %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :editor %><br>
+    <%= f.text_field :editor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :expertise_area %><br>
+    <%= f.text_field :expertise_area %>
+    <%= f.text_area :expertise_area1 %>
+  </div>
+
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

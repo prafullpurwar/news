@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @news.headline %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @news.body %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @news.author %>
+</p>
+
+<p>
+  <strong>Newspaper:</strong>
+  <%= @news.newspaper %>
+</p>
+
+<p>
+  <strong>Editor:</strong>
+  <%= @news.editor %>
+</p>
+
+<p>
+  <strong>ExpertiseArea:</strong>
+  <%= @news.expertise_area %>
+</p>
+
+<p>
+  <strong>ExpertiseArea1:</strong>
+  <%= @news.expertise_area1 %>
+</p
+
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>
